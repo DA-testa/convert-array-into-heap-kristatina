@@ -14,7 +14,7 @@ def build_heap(data):
 
 def main():
     
-    #izvele = input("F vai I?")
+    izvele = input("F vai I?")
     if "F" in izvele:
         F_path = input()
         with open(F_path, "r") as f:
