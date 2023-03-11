@@ -14,7 +14,7 @@ def build_heap(data):
 
 def main():
     
-    izvele = input("F vai I?")
+    izvele = input("F or I?")
     if "F" in izvele:
         F_path = input()
         with open(F_path, "r") as f:
@@ -25,6 +25,13 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
     
+    # checks if lenght of data is the same as the said lenght
+    assert len(data) == n
+
+    # calls function to assess the data 
+    # and give back all swaps
+    swaps = build_heap(data)
+    
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
@@ -34,13 +41,6 @@ def main():
         if 2*i+2 < len(data) and data[2*i+2] < data[i]:
             return False
     return True
-        
-    # checks if lenght of data is the same as the said lenght
-    assert len(data) == n
-
-    # calls function to assess the data 
-    # and give back all swaps
-    swaps = build_heap(data)
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
