@@ -12,18 +12,8 @@ def build_heap(data):
         swapCount += 1
     return swaps, swapCount
 
-def main(swapCount):
+def main():
     
-    # TODO : add input and corresponding checks
-    # add another input for I or F 
-    # first two tests are from keyboard, third test is from a file
-    for i in range(len(data)):
-        if 2*i+1 < len(data) and data[2*i+1] < data[i]:
-            return False
-        if 2*i+2 < len(data) and data[2*i+2] < data[i]:
-            return False
-    return True
-
     izvele = input("F vai I?")
     if "F" in izvele:
         F_path = input("faila ceļš: ")
@@ -34,6 +24,16 @@ def main(swapCount):
         # input from keyboard
         n = int(input())
         data = list(map(int, input().split()))
+    
+    # TODO : add input and corresponding checks
+    # add another input for I or F 
+    # first two tests are from keyboard, third test is from a file
+    for i in range(len(data)):
+        if 2*i+1 < len(data) and data[2*i+1] < data[i]:
+            return False
+        if 2*i+2 < len(data) and data[2*i+2] < data[i]:
+            return False
+    return True
         
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
@@ -44,7 +44,6 @@ def main(swapCount):
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
-    print(4*len(data))
     print(swapCount)
 
     # output all swaps
