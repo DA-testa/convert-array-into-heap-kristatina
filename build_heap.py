@@ -16,13 +16,13 @@ def main():
     
     izvele = input()
     if "F" in izvele:
-        F_path = input()
-        with open(F_path, "r") as f:
+        F_path = str(input())
+        with open("./tests/" + F_path + 'r') as f:
             n = f.read()
-            data = list(map(int, input().split()))
+            data = list(map(int, f.read().split()))
     elif "I" in izvele:
         # input from keyboard
-        n = int(input())
+        n = input()
         data = list(map(int, input().split()))
     
     # checks if lenght of data is the same as the said lenght
@@ -35,12 +35,12 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-    for i in range(len(data)):
-        if 2*i+1 < len(data) and data[2*i+1] < data[i]:
-            return False
-        if 2*i+2 < len(data) and data[2*i+2] < data[i]:
-            return False
-    return True
+    #for i in range(len(data)):
+        #if 2*i+1 < len(data) and data[2*i+1] < data[i]:
+            #return False
+        #if 2*i+2 < len(data) and data[2*i+2] < data[i]:
+            #return False
+    #return True
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
