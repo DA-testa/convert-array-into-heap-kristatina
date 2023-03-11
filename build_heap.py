@@ -12,7 +12,7 @@ def build_heap(data):
         swapCount += 1
     return (swaps, swapCount)
 
-def main(swapCount):
+def main():
     
     #izvele = input("F vai I?")
     if "F" in izvele:
