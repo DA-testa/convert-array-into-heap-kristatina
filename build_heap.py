@@ -1,26 +1,42 @@
 # python3
-
+import heapq
 
 def build_heap(data):
     swaps = []
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
-
-
-    return swaps
-
+    x = len(data)
+    heapq.heapify(data)
+    swapCount = 0
+    for i in range(x):
+        swaps.append(heapq.heappop(data))
+        swapCount += 1
+    return swaps, swapCount
 
 def main():
     
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
+    x = len(data)
+    for i in range(x):
+        if 2*i+1 < x and data[2*i+1] < data[i]:
+            return False
+        if 2*i+2 < 2 and data[2*i+2] < data[i]:
+            return False
+    return True
 
-
-    # input from keyboard
-    n = int(input())
-    data = list(map(int, input().split()))
-
+    izvele = input("F vai I?")
+    if "F" in izvele:
+        F_path = input("faila ceļš: ")
+        with open(F_path, "r") as f:
+            n = f.read()
+            data = list(map(int, input().split()))
+    elif "I" in izvele:
+        # input from keyboard
+        n = int(input())
+        data = list(map(int, input().split()))
+        
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
 
@@ -30,7 +46,8 @@ def main():
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
-
+    print(4*len(data))
+    print(swapCount)
 
     # output all swaps
     print(len(swaps))
