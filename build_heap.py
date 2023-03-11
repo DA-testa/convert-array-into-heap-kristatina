@@ -12,11 +12,11 @@ def build_heap(data):
         swapCount += 1
     return (swaps, swapCount)
 
-def main():
+def main(swapCount):
     
-    izvele = input("F vai I?")
+    #izvele = input("F vai I?")
     if "F" in izvele:
-        F_path = input("faila ceļš: ")
+        F_path = input()
         with open(F_path, "r") as f:
             n = f.read()
             data = list(map(int, input().split()))
