@@ -10,7 +10,7 @@ def build_heap(data):
     for i in range(len(data)):
         swaps.append(heapq.heappop(data))
         swapCount += 1
-    return swaps, swapCount
+    return (swaps, swapCount)
 
 def main():
     
