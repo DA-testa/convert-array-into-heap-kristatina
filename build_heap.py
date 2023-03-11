@@ -54,4 +54,4 @@ def main(data, swapCount):
 
 
 if __name__ == "__main__":
-    main()
+    main(data, swapCount)
