@@ -16,13 +16,13 @@ def main():
     
     izvele = input()
     if "F" in izvele:
-        F_path = str(input())
+        F_path = input()
         with open("./tests/" + F_path + "r") as f:
-            n = f.read()
+            n = int(f.read())
             data = list(map(int, f.read().split()))
     elif "I" in izvele:
         # input from keyboard
-        n = input()
+        n = int(input())
         data = list(map(int, input().split()))
     
     # checks if lenght of data is the same as the said lenght
@@ -48,8 +48,8 @@ def main():
 
     # output all swaps
     print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+    for i in swaps:
+        print(i)
 
 
 if __name__ == "__main__":
