@@ -47,10 +47,11 @@ def main():
     #print(swapCount)
 
     # output all swaps
-    print(len(swaps))
     
     for i in swaps:
         print(i)
+    
+    print(len(swaps))
 
 
 if __name__ == "__main__":
