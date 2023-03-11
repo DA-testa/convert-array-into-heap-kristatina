@@ -12,7 +12,7 @@ def build_heap(data):
         swapCount += 1
     return swaps, swapCount
 
-def main(data, swapCount):
+def main(swapCount):
     
     # TODO : add input and corresponding checks
     # add another input for I or F 
@@ -53,5 +53,5 @@ def main(data, swapCount):
         print(i, j)
 
 
-#if __name__ == "__main__":
-    #main()
+if __name__ == "__main__":
+    main()
