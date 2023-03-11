@@ -48,6 +48,7 @@ def main():
 
     # output all swaps
     print(len(swaps))
+    
     for i in swaps:
         print(i)
 
