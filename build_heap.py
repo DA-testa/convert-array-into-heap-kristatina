@@ -17,7 +17,7 @@ def main():
     izvele = input()
     if "F" in izvele:
         F_path = str(input())
-        with open("./tests/" + F_path + 'r') as f:
+        with open("./tests/" + F_path + "r") as f:
             n = f.read()
             data = list(map(int, f.read().split()))
     elif "I" in izvele:
