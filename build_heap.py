@@ -1,19 +1,16 @@
 # python3
-import heapq
 
 def build_heap(data):
     swaps = []
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
-    heapq.heapify(data)
-    swapCount = 0
     for i in range(len(data)):
-        swaps.append(heapq.heappop(data))
-        swapCount += 1
-    return (swaps, swapCount)
+        for j in range(i+1, len(data)):
+            if data[i] > data[j]:
+                swaps.append((i,j))
+    return swaps
 
 def main():
-    
     izvele = input()
     if "F" in izvele:
         F_path = input()
@@ -44,15 +41,11 @@ def main():
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
-    #print(swapCount)
 
     # output all swaps
-    
+    print(len(swaps))
     for i in swaps:
         print(i)
-    
-    print(len(swaps))
-
 
 if __name__ == "__main__":
     main()
