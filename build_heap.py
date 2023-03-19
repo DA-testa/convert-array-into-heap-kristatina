@@ -18,7 +18,7 @@ def main():
     izvele = input()
     if "F" in izvele:
         F_path = input()
-        with open("./tests/" + F_path + "r") as f:
+        with open(F_path + "r") as f:
             n = int(f.read())
             data = list(map(int, f.read().split()))
     elif "I" in izvele:
@@ -26,7 +26,7 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
     
-    # checks if lenght of data is the same as the said lenght
+    # checks if lenght of data is the same as the said lenght "./tests/" + 
     assert len(data) == n
 
     # calls function to assess the data 
