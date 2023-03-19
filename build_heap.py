@@ -4,14 +4,13 @@ def build_heap(data):
     swaps = []
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
-    swapped = True
-    while swapped:
-        swapped = False
-        for i in range(len(data)-1):
-            if data[i]>data[i+1]:
-                data[i], data[i+1] = data[i+1], data[i]
-                swapped = True
-                swaps.append((i,i+1))
+    for i in range (len(data)-1,0,-1):
+        floor = (i-1)//2
+        parent = floor
+        while i>0 and data[parent] > data[i]:
+            swaps.append((parent,i))
+            i = parent
+            parent = (i-1)//2
     return swaps
 
 def main():
