@@ -19,8 +19,8 @@ def main():
     if "F" in izvele:
         F_path = str(input())
         with open("./tests/" + F_path, 'r') as f:
-            n = int(f.read())
-            data = list(map(int, f.read().split()))
+            n = int(f.readline())
+            data = list(map(int, f.readline().split()))
     elif "I" in izvele:
         # input from keyboard
         n = int(input())
