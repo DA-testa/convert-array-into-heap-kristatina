@@ -17,7 +17,7 @@ def build_heap(data):
 def main():
     izvele = input()
     if "F" in izvele:
-        F_path = input()
+        F_path = str(input())
         with open("./tests/" + F_path, 'r') as f:
             n = int(f.read())
             data = list(map(int, f.read().split()))
