@@ -18,7 +18,7 @@ def main():
     izvele = input()
     if "F" in izvele:
         F_path = input()
-        with open(F_path + "r") as f:
+        with open(F_path + 'r') as f:
             n = int(f.read())
             data = list(map(int, f.read().split()))
     elif "I" in izvele:
