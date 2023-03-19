@@ -8,6 +8,7 @@ def build_heap(data):
         floor = (i-1)//2
         parent = floor
         while i>0 and data[parent] > data[i]:
+            data[parent], data[i] = data[i], data[parent]
             swaps.append((parent,i))
             i = parent
             parent = (i-1)//2
